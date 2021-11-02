@@ -5,6 +5,7 @@ Important! The game is only a game, and can (and will) not be connected to any p
 
 
 ## To do
+- [ ] Add currency configuration option
 - [ ] Auto delete old games after certain time of inactivity
 - [ ] playerSocketID can contain old data if disconnect was not registered. If this causes issues that people cannot login with their existig player details, consider creating a cleanup function which periodically scans the object and clears old data.
 - [ ] Players can sometimes not click (onclick events not triggered). This typically happens after the server restarted.
