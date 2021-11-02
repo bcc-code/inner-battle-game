@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Inner Battle game manager</title>
+
+        <link rel="stylesheet" href="warzone-manager.css">
+    </head>
+    <body>
+        <!-- Login Form -->
+        <div id="loginModal">
+            <div class="loginBox">
+                <p class="loginWelcome" align="center">Inner Battle game manager</p>
+                <input id="gameID" class="loginInput" type="text" onchange="loginChange()" align="center" placeholder="Game ID" >
+                <input id="password" class="loginInput" type="password" align="center" placeholder="Password">
+                <button id="loginButton" class="loginSubmit" type="submit" onclick="loginClick()" align="center">New game</button>
+                <p id="loginError">Login to an existing game, or leave the Game ID blank to create a new game.</p>
+            </div>
+        </div>
+        <div id="settings">
+            <div class="root">
+                <h1>Inner Battle game manager</h1>
+                <br>
+                <h3 id="gameIDLabel">Game ID</h3>
+                <br>
+                <p id="gameTotals">Game Totals</p>
+                <br>
+                <div class="fileUpload">
+                    <h4 class="heading">Import User Credit</h3>
+                    <p>File format: "name and surname";"phone number";credit</p>
+                    <p>Example: "John Smith";"0123456789";500</p>
+                    <p>The credit value should be a number without any currency symbols (like USD, EUR, etc).</p>
+                    <input type="file" id="creditsUpload" />
+                    <input type="button" id="uploadCredits" value="Upload" onclick="uploadCredits()" />
+                </div>
+                <br>
+                <div class="fileUpload">
+                    <h4 class="heading">Import weapons</h3>
+                    <p>File format: "contributor's name","verse name","verse text"</p>
+                    <p>Example: "John Smith";"1 John 3:9";"Whoever has been born of God does not sin, for His seed remains in him; and he cannot sin, because he has been born of God."</p>
+                    <input type="file" id="weaponsUpload" />
+                    <input type="button" id="uploadWeapons" value="Upload" onclick="uploadWeapons()" />
+                </div>
+                <br>
+                <div class="settings">
+                    <h4 class="heading">Game settings</h3>
+                    <div id="settingsTable" >
+    
+                    </div>
+                    <input type="button" id="btnsettings" value="Submit Changes" onclick="Submit()" />
+                </div>
+                <br>
+                <div class="controls">
+                    <input type="button" class="reset" id="reset" value="Reset Game" onclick="Reset()" />
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/papaparse.min.js"></script>
+        <script src="warzone-manager.js"></script>
+    </body> 
+
+
+
+</html>
+
+    

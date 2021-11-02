@@ -1,0 +1,121 @@
+/* ================================== */
+/* General / global settings */
+/* ================================== */
+
+body {
+  background-color: rgb(196, 206, 209);
+  width:100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  margin: 0; 
+  position: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 10px;
+}
+
+/* ================================== */
+/* Login */
+/* ================================== */
+
+#loginModal{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  background-color: #000000ba;
+  opacity: 1;
+  z-index: 100;
+}
+
+.loginBox {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff85;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  text-align: center;
+  padding: 20px;
+}
+
+.loginWelcome {
+  color: #05251299;
+  margin-bottom: 10px;
+  /* font-size: 50px; */
+}
+
+.loginInput {
+  position: relative;
+  width: 80%;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 700;
+  /* font-size: 40px; */
+  letter-spacing: 1px;
+  background: rgb(206 206 206);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(113 113 113);
+  text-align: center;
+}
+
+.loginInput:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.loginSubmit {
+  position: relative;
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #052512, #6b9b69);
+/*   width: auto; */
+  margin-bottom: 10px;
+  /* font-size: 40px; */
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#loginError {
+  margin-left: 20px;
+  margin-right: 20px;
+  /* font-size: 20px; */
+}
+
+/* ================================== */
+/* Settings */
+/* ================================== */
+
+#settings {
+  display: none;
+}
+
+.root{
+    background-color: #ffffff;
+    border-width: 3px;
+    width: 350px;
+    height: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    overflow: auto;
+}
+
+.settingLabel{
+    font-size: 12px;
+}
+

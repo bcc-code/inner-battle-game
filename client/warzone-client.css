@@ -1,0 +1,428 @@
+/* ================================== */
+/* General / global settings */
+/* ================================== */
+
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+
+* { margin: 0;
+  padding: 0;
+}
+
+body {    
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(219, 219, 219);
+  height: 100%;
+  margin: 0; 
+  position: fixed;
+  overflow: hidden;
+  background-color: black;
+} 
+
+/* ================================== */
+/* Login */
+/* ================================== */
+
+#loginModal{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  background-color: #000000ba;
+  opacity: 1;
+  z-index: 100;
+}
+
+.loginBox {
+  display: block;
+  position: absolute;
+  /* left: 560px;
+  top: 240px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  background-color: #ffffff85;
+  width: 800px;
+  /* height: 600px; */
+  height: auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  text-align: center;
+}
+
+.loginWelcome {
+  margin-bottom: 40px;
+  color: #05251299;
+  font-size: 50px;
+}
+
+.loginInput {
+  position: relative;
+  width: 80%;
+  margin-bottom: 40px;
+  color: black;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 1px;
+  background: rgb(206 206 206);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(113 113 113);
+  text-align: center;
+}
+
+.loginInput:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.loginSubmit {
+  position: relative;
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #052512, #6b9b69);
+  width: 30%;
+  margin-bottom: 40px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#loginError {
+  font-size: 30px;
+}
+
+/* ================================== */
+/* Game div */
+/* ================================== */
+
+div.game{
+  width: 1920px;
+  height: 1080px;
+  min-width: 1920px;
+  min-height: 1080px;
+  background-image: url("/img/InnerBattle.jpg");
+  background-size: cover;
+}
+
+/* ================================== */
+/* Title banner */
+/* ================================== */
+
+#titleBanner {
+  position: absolute;
+  width: 800px;
+  left: 560px;
+  top: 82px;
+  text-align: center;
+  font-size: 50px; 
+  color: #dedddc;
+}
+
+/* ================================== */
+/* Player status */
+/* ================================== */
+
+.statusHeading {
+  font-size: 35px
+}
+
+.statusValue {
+  font-size: 30px
+}
+
+#statusTextCredit {
+  position: absolute;
+  display: block;
+  width: 200px;
+  left: 40px;
+  top: 38px;
+}
+
+#statusTextPlayerTotal {
+  position: absolute;
+  display: block;
+  width: 200px;
+  left: 40px;
+  top: 124px;
+}
+
+#statusVal1Credit {
+  position: absolute;
+  display: block;
+  left: 200px;
+  top: 25px;
+  color: orange;
+}
+
+#statusVal2Credit {
+  position: absolute;
+  display: block;
+  left: 200px;
+  top: 55px;
+}
+
+#statusVal1PlayerTotal {
+  position: absolute;
+  display: block;
+  left: 200px;
+  top: 110px;
+  color: orange;
+}
+
+#statusVal2PlayerTotal {
+  position: absolute;
+  display: block;
+  left: 200px;
+  top: 140px;
+}
+
+/* ================================== */
+/* Game status */
+/* ================================== */
+
+.gameStatusValue {
+  font-size: 45px;
+}
+
+#statusVal1GameTotal {
+  position: absolute;
+  display: block;
+  left: 47px;
+  top: 900px;
+  color: orange;
+}
+
+#statusVal2GameTotal {
+  position: absolute;
+  display: block;
+  left: 47px;
+  top: 950px;
+}
+
+/* ================================== */
+/* Weapons */
+/* ================================== */
+
+#weaponList {
+  position: absolute;
+  display: block;
+  top: 7px;
+  width: 343px;
+  bottom: 0px;            
+  right: 7px;
+  z-index: 11;
+}
+
+.weapon {
+  display: block;
+  margin-bottom: 4px;
+  height: 210px;
+  width: 343;
+  background-image: url("/img/WeaponCard.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.weaponName {
+  font-size: 19px;
+  position: absolute;
+  left: 15px;
+  top: 56px;
+  right: 0px;
+  height: 25px;
+  overflow:hidden;
+}
+
+.weaponCost {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fd4244;
+  position: absolute;
+  left: 7px;
+  top: 2px;
+
+}
+
+.weaponSeller {
+  position: absolute;
+  font-size: 19px;
+  left: 15px;
+  top: 32px;
+  color: #888888;
+  right: 0px;
+  height: 25px;
+  overflow:hidden;
+}
+
+.weaponText {
+  font-size: 16px;
+  top: 85px;
+  left: 15px;
+  right: 55px;
+  bottom: 8px;
+  overflow: hidden;
+  position: absolute;
+  color: #8fbd58;
+}
+
+/* ================================== */
+/* Weapon modal */
+/* ================================== */
+
+#weaponModal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 20;
+}
+
+#weaponModalCard {
+  position: absolute;
+  display: block;
+  left: 310px;
+  top: 70px;
+  height: 800px;
+  width: 1300px;
+  background-image: url("/img/WeaponCard.jpg");
+  background-size: cover;
+  opacity: 0.8;
+}
+
+#weaponModalCardName {
+  font-size: 40px;
+  position: absolute;
+  left: 55px;
+  top: 225px;
+  overflow:hidden;
+}
+
+#weaponModalCardCost {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fd4244;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+}
+
+#weaponModalCardSeller {
+  position: absolute;
+  font-size: 40px;
+  left: 55px;
+  top: 130px;
+  color: #888888;
+}
+
+#weaponModalCardText {
+  font-size: 30px;
+  top: 320px;
+  left: 55px;
+  right: 210px;
+  bottom: 15px;
+  overflow: hidden;
+  position: absolute;
+  color: #8fbd58;
+}
+
+#weaponModalBuy {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 100px;
+  top: 900px;
+  left: 310px;
+  background-color: #cd3638;
+  opacity: 0.8;
+  border: 7px solid #cb8e32;
+  text-align: center;
+  line-height: 100px;
+  color: #cb8e32;
+  font-size: 60
+}
+
+#weaponModalCancel {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 100px;
+  top: 900px;
+  right: 310px;
+  background-color: #18a9ac;
+  opacity: 0.8;
+  border: 7px solid #cb8e32;
+  text-align: center;
+  line-height: 100px;
+  color: #cb8e32;
+  font-size: 60
+}
+
+/* ================================== */
+/* Visor */
+/* ================================== */
+
+.visor {
+  display: none;
+  position: absolute;
+  z-index: 13;
+  background-image: url("/img/visorRed.svg");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  
+}
+
+#visorShot {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(255 255 0 / 0.3);
+  z-index: 12;
+}
+
+
+/* ================================== */
+/* Victory */
+/* ================================== */
+
+.victory {
+  display: flex;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.victoryCircle {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+}
+
+.victoryName {
+  color: rgb(255 165 0);
+  font-size: 20px;
+  z-index: 5;
+}
+

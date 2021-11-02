@@ -1,0 +1,20 @@
+{
+  "name": "inner-battle",
+  "version": "1.0.0",
+  "description": "The Inner Battle is a game inspired by Elias Aslaksen's publication \"The development of a believer\". The game can be used as a fun activity during church collections, while simultaneously inspiring church members to engage with God's Word by sending \"weapons\" (Bible verses) in return for game credits. This can help younger members with little income to feel part of the collection even though they cannot contribute so much physically.",
+  "main": "warzone-server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bccsa@dev.azure.com/bccsa/Warzone/_git/Warzone"
+  },
+  "author": "",
+  "license": "MIT"
+}

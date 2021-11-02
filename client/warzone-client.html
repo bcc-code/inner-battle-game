@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Inner Battle</title>
+
+        <link rel="stylesheet" href="warzone-client.css">
+        <link rel="manifest" href="manifest.json">
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+		<meta name="apple-mobile-web-app-title" content="Inner Battle">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+    </head>
+    <body>
+        <!-- Game div, containing all the game elements -->
+        <div id="game" class="game" onclick="openFullscreen()">
+
+            <!-- Login Form -->
+            <div id="loginModal">
+                <div class="loginBox">
+                    <p class="loginWelcome" align="center">WELCOME TO THE BATTLE</p>
+                    <input class="loginInput " type="text" align="center" placeholder="Game ID" id="gameID">
+                    <input class="loginInput " type="text" align="center" placeholder="Name and Surname" id="loginName">
+                    <input class="loginInput" type="text" align="center" placeholder="Phone Number" id="loginPhoneNumber">
+                    <button class="loginSubmit" type="submit" onclick="login()" align="center">Start!</button>
+                    <p id="loginError">The game has been tested in Google Chrome and Safari (Mac and iOS 15), and works best in landscape (horizontal view) on mobile phones.
+                        Enter the same name, surname and phone number you used to submit your weapons.
+                    </p>
+                </div>
+            </div>
+
+            <div id="titleBanner"></div>
+            
+            <div id="visor" class="visor" hidden onclick="shoot(event)">
+                <div id="visorShot"></div>
+            </div>                  
+            
+            <!-- Player status -->
+            <span id="statusTextCredit" class="statusHeading">Credit</span>
+            <span id="statusVal1Credit" class="statusValue"></span>
+            <span id="statusVal2Credit" class="statusValue"></span>
+            <span id="statusTextPlayerTotal" class="statusHeading">Total</span>
+            <span id="statusVal1PlayerTotal" class="statusValue"></span>
+            <span id="statusVal2PlayerTotal" class="statusValue"></span>
+
+            <!-- Game status -->
+            <span id="statusVal1GameTotal" class="gameStatusValue"></span>
+            <span id="statusVal2GameTotal" class="gameStatusValue"></span>
+           
+            <!-- Victories -->
+            <div id="victoryList"></div>
+            
+            <!-- Weapons -->
+            <div id="weaponList"></div>
+            <div id="weaponModal">
+                <div id="weaponModalCard">
+                    <span id="weaponModalCardName"></span>
+                    <span id="weaponModalCardCost"></span>
+                    <span id="weaponModalCardSeller"></span>
+                    <span id="weaponModalCardText"></span>
+                </div>
+                <div id="weaponModalBuy" onclick="buyClick()">buy</div>
+                <div id="weaponModalCancel" onclick="buyCancel()">cancel</div>
+            </div>
+        </div>
+    
+        <!-- Templates section. This section is hidden and reusable objects are placed in
+        this section. Each object should be enclosed in a div, and the inner html of the div
+        will be copied via jquery, and injected in the final div in the game div. -->
+        <div id="templates" hidden>
+            <div id="victory">
+                <div id="victory%" class="victory" hidden>
+                    <div id="victoryCircle%" class="victoryCircle"></div>
+                    <span id="victoryName%" class="victoryName"></span>
+                </div>
+            </div>  
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/jquery.js"></script>
+        <script src="warzone-client.js"></script>
+    </body>
+</html>
